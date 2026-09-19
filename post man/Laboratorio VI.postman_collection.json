@@ -1,0 +1,405 @@
+{
+  "info": {
+    "_postman_id": "82ed259d-5c4d-44e9-bb8f-8b73a908e14e",
+    "name": "Laboratorio VI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57796538"
+  },
+  "item": [
+    {
+      "name": "libros",
+      "item": [
+        {
+          "name": "post libros",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"titulo\": \"Cien años de soledad\",\r\n  \"autor\": \"Gabriel García Márquez\",\r\n  \"isbn\": \"9780307474728\",\r\n  \"anioPublicacion\": 1967,\r\n  \"estado\": \"DISPONIBLE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/libros",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "libros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get libros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/libros",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "libros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get libros 2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/libros/titulo/Cien%20años%20de%20soledad",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "libros",
+                "titulo",
+                "Cien%20años%20de%20soledad"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "put libro",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"titulo\": \"Cien años de soledad\",\r\n  \"autor\": \"Gabriel García Márquez\",\r\n  \"isbn\": \"9780307474728\",\r\n  \"anioPublicacion\": 1967,\r\n  \"estado\": \"PRESTADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/libros/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "libros",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete libro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/libros/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "libros",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reservas",
+      "item": [
+        {
+          "name": "post reserva",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombreCliente\": \"Carlos Pérez\",\r\n  \"habitacion\": \"205\",\r\n  \"fechaEntrada\": \"2026-09-20\",\r\n  \"fechaSalida\": \"2026-09-23\",\r\n  \"estado\": \"CONFIRMADA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/reservas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "reservas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get reserva",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/reservas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "reservas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get reserva 2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/reservas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "reservas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "put reserva",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombreCliente\": \"Carlos Pérez\",\r\n  \"habitacion\": \"305\",\r\n  \"fechaEntrada\": \"2026-09-20\",\r\n  \"fechaSalida\": \"2026-09-24\",\r\n  \"estado\": \"CONFIRMADA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/reservas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "reservas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete reservas",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/reservas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "reservas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "cursos",
+      "item": [
+        {
+          "name": "post cursos",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombre\": \"Programación Orientada a Objetos\",\r\n  \"codigo\": \"POO101\",\r\n  \"creditos\": 4,\r\n  \"estado\": \"ACTIVO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/cursos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "cursos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get cursos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/cursos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "cursos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get cursos 2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/cursos/codigo/POO101",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "cursos",
+                "codigo",
+                "POO101"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "put cursos",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombre\": \"Programación Orientada a Objetos\",\r\n  \"codigo\": \"POO101\",\r\n  \"creditos\": 4,\r\n  \"estado\": \"INACTIVO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/cursos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "cursos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete cursos",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/cursos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "cursos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
